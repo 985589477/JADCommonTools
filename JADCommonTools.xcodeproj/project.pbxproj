@@ -24,7 +24,7 @@
 		C2E087B023BD94B000DFE8FD /* UITableView+JADCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E087AF23BD94B000DFE8FD /* UITableView+JADCategory.swift */; };
 		C2E087B223BD94ED00DFE8FD /* UIView+JADCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E087B123BD94ED00DFE8FD /* UIView+JADCategory.swift */; };
 		C2E087B423BD955900DFE8FD /* UIScreen+JADCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E087B323BD955900DFE8FD /* UIScreen+JADCategory.swift */; };
-		C2E087B723BD957E00DFE8FD /* UITextField+Rules.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E087B523BD957E00DFE8FD /* UITextField+Rules.swift */; };
+		C2E087B723BD957E00DFE8FD /* UITextField+JADRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E087B523BD957E00DFE8FD /* UITextField+JADRules.swift */; };
 		C2E087BA23BD9D8300DFE8FD /* PhoneBitStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E087B923BD9D8300DFE8FD /* PhoneBitStorage.swift */; };
 		C2E087BC23BD9E8D00DFE8FD /* UIImage+JADCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E087BB23BD9E8D00DFE8FD /* UIImage+JADCategory.swift */; };
 		C2E087BE23BD9F8E00DFE8FD /* Array+JADCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E087BD23BD9F8E00DFE8FD /* Array+JADCategory.swift */; };
@@ -77,7 +77,7 @@
 		C2E087AF23BD94B000DFE8FD /* UITableView+JADCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+JADCategory.swift"; sourceTree = "<group>"; };
 		C2E087B123BD94ED00DFE8FD /* UIView+JADCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+JADCategory.swift"; sourceTree = "<group>"; };
 		C2E087B323BD955900DFE8FD /* UIScreen+JADCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+JADCategory.swift"; sourceTree = "<group>"; };
-		C2E087B523BD957E00DFE8FD /* UITextField+Rules.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Rules.swift"; sourceTree = "<group>"; };
+		C2E087B523BD957E00DFE8FD /* UITextField+JADRules.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+JADRules.swift"; sourceTree = "<group>"; };
 		C2E087B923BD9D8300DFE8FD /* PhoneBitStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneBitStorage.swift; sourceTree = "<group>"; };
 		C2E087BB23BD9E8D00DFE8FD /* UIImage+JADCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+JADCategory.swift"; sourceTree = "<group>"; };
 		C2E087BD23BD9F8E00DFE8FD /* Array+JADCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+JADCategory.swift"; sourceTree = "<group>"; };
@@ -209,7 +209,7 @@
 				C2E087AF23BD94B000DFE8FD /* UITableView+JADCategory.swift */,
 				C2E087B123BD94ED00DFE8FD /* UIView+JADCategory.swift */,
 				C2E087B323BD955900DFE8FD /* UIScreen+JADCategory.swift */,
-				C2E087B523BD957E00DFE8FD /* UITextField+Rules.swift */,
+				C2E087B523BD957E00DFE8FD /* UITextField+JADRules.swift */,
 				C2E087BB23BD9E8D00DFE8FD /* UIImage+JADCategory.swift */,
 				C2E087BF23BD9FDE00DFE8FD /* UIDevice+JADCategroy.swift */,
 				C2E087BD23BD9F8E00DFE8FD /* Array+JADCategory.swift */,
@@ -429,7 +429,7 @@
 				C2E087BC23BD9E8D00DFE8FD /* UIImage+JADCategory.swift in Sources */,
 				C2E087BA23BD9D8300DFE8FD /* PhoneBitStorage.swift in Sources */,
 				C2E087C823BDA4BC00DFE8FD /* JADFormBaseCell.swift in Sources */,
-				C2E087B723BD957E00DFE8FD /* UITextField+Rules.swift in Sources */,
+				C2E087B723BD957E00DFE8FD /* UITextField+JADRules.swift in Sources */,
 				C2E087E723BDB03E00DFE8FD /* JADAnyScrollTableView.swift in Sources */,
 				C2E087E523BDB02C00DFE8FD /* JADScrollSegmentView.swift in Sources */,
 				C2E087F123BDC8E300DFE8FD /* JADBannerView.swift in Sources */,
