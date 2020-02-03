@@ -13,6 +13,25 @@ enum JADTimestampLevel: Double {
     case ms = 1000.0 //毫秒
 }
 
+///Substring
+extension String {
+    
+    ///下标截取字符串 start + lenght = end
+    ///example  let string = "abcdefg";     string[1,4];     log "bcd"
+    subscript (_ start: Int,_ end: Int) -> Substring {
+        let sIndex = self.index(self.startIndex, offsetBy: start)
+        let eIndex = self.index(self.startIndex, offsetBy: end)
+        return self[sIndex ..< eIndex]
+    }
+    ///prefix:从start向后截取      suffix:从end位置向前截取
+    ///此方法提供范围内截取 同上面下标截取
+    func subString(range: Range<Int>) -> Substring {
+        let sIndex = self.index(self.startIndex, offsetBy: range.lowerBound)
+        let eIndex = self.index(self.startIndex, offsetBy: range.upperBound)
+        return self[sIndex ..< eIndex]
+    }
+}
+
 extension String {
     
     ///时间戳

@@ -102,6 +102,16 @@ removeDuplicates 元素去重
 获取设备字符串
 
 # String+JADCategory
+字符串截取
+```
+
+let string = "fisrtString"
+print(string[1,4]) //log "isr"
+
+print(string.subString(range: Range(uncheckedBounds: (1,4)))) //log "isr"
+ 
+```
+
 时间戳转换 p1: 格式 p2 级别，毫秒或者秒 
 timeFormatterWithTimestamp(dateFormatter: String, level: JADTimestampLevel? = .ms)   
 

@@ -15,7 +15,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        let string = "firstString"
+        print(string.subString(range: Range(uncheckedBounds: (1,4))))
+
         let label = UILabel()
         label.textAlignment = .center
         //        label.dynamicText = JADDynamicText({ _ in JADLanguage.key("dynamicText") })
