@@ -35,10 +35,7 @@ class ViewController: UIViewController {
             make.top.equalToSuperview().offset(100)
             make.height.equalTo(20)
         }
-        
-        
-        
-        
+
         let button = UIButton()
         button.setTitle("修改国际化", for: .normal)
         button.addTarget(self, action: #selector(changedLocalized), for: .touchUpInside)
@@ -94,6 +91,13 @@ class ViewController: UIViewController {
     }
     
     @objc func clickLanguageButton(_ sender: UIButton) {
+        let picker = JADImagePicker(library: JADImageLibraryConfiguration())
+        picker.open(sourceType: .photoLibrary)
+        picker.result = { (result) in
+            result.originalImage
+            result.editedImage
+            result.info
+        }
     }
     
     @objc func changedLocalized() {

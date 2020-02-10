@@ -188,3 +188,25 @@ JADDefaultNavigation为示例
 超过屏幕可以滑动的栏目控制view，类似网易新闻
 必须设置 behaviorDelegate
 可选设置 delegate
+
+# JADImagePicker
+图片选择器
+
+```
+let picker = JADImagePicker()
+picker.open(sourceType: .camera) || picker.open(sourceType: .photoLibrary)
+picker.result = { (result) in
+    result.originalImage
+    result.editedImage
+    result.info
+}
+```
+### JADImagePhotosConfiguration
+可以针对JADImagePicker 的 相机功能配置
+
+### JADImageLibraryConfiguration
+可以针对JADImagePicker 的 相册功能配置
+
+只需要在JADImagePicker构造时候传入,对哪个有非默认设置的修改传入哪个
+JADImagePicker(photos: , library: )
+

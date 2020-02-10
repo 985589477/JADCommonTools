@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C27F173D23C86E7D004B5E71 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C27F173C23C86E7D004B5E71 /* Photos.framework */; };
+		C2920E4D23F0EEFF005EB52A /* JADImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2920E4C23F0EEFF005EB52A /* JADImagePicker.swift */; };
 		C2E0874E23B99FDD00DFE8FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E0874D23B99FDD00DFE8FD /* AppDelegate.swift */; };
 		C2E0875223B99FDD00DFE8FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E0875123B99FDD00DFE8FD /* ViewController.swift */; };
 		C2E0875523B99FDD00DFE8FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2E0875323B99FDD00DFE8FD /* Main.storyboard */; };
@@ -58,6 +59,7 @@
 		29F1FB6E6830FCCADDEEF9AE /* Pods-JADCommonTools.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JADCommonTools.debug.xcconfig"; path = "Target Support Files/Pods-JADCommonTools/Pods-JADCommonTools.debug.xcconfig"; sourceTree = "<group>"; };
 		88E46F0336F953670B8EE53A /* Pods-JADCommonTools.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JADCommonTools.release.xcconfig"; path = "Target Support Files/Pods-JADCommonTools/Pods-JADCommonTools.release.xcconfig"; sourceTree = "<group>"; };
 		C27F173C23C86E7D004B5E71 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
+		C2920E4C23F0EEFF005EB52A /* JADImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JADImagePicker.swift; sourceTree = "<group>"; };
 		C2A5BDEE23BF1126001956DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C2E0874A23B99FDD00DFE8FD /* JADCommonTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JADCommonTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2E0874D23B99FDD00DFE8FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -258,13 +260,14 @@
 			isa = PBXGroup;
 			children = (
 				C2E087E423BDB02C00DFE8FD /* JADScrollSegmentView.swift */,
+				C2920E4C23F0EEFF005EB52A /* JADImagePicker.swift */,
+				C2E087E023BDAE7B00DFE8FD /* JADNavigation.swift */,
 				C2E087E623BDB03E00DFE8FD /* JADAnyScrollTableView.swift */,
 				C2E087E223BDAFE700DFE8FD /* JADButton.swift */,
 				C2E087DE23BDADF600DFE8FD /* JADProgressView.swift */,
 				C2E087D823BDADA000DFE8FD /* JADMaskView.swift */,
 				C2E087D623BDAD6B00DFE8FD /* JADWindowViewController.swift */,
 				C2E087DB23BDADCF00DFE8FD /* JADWebView.swift */,
-				C2E087E023BDAE7B00DFE8FD /* JADNavigation.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -434,6 +437,7 @@
 				C2E087C923BDA4BC00DFE8FD /* JADFormConfiguration.swift in Sources */,
 				C2E087F223BDC8E300DFE8FD /* JADBannerViewLayout.swift in Sources */,
 				C2E087F023BDC8E300DFE8FD /* JADBannerViewConfiguration.swift in Sources */,
+				C2920E4D23F0EEFF005EB52A /* JADImagePicker.swift in Sources */,
 				C2E087BC23BD9E8D00DFE8FD /* UIImage+JADCategory.swift in Sources */,
 				C2E087BA23BD9D8300DFE8FD /* PhoneBitStorage.swift in Sources */,
 				C2E087C823BDA4BC00DFE8FD /* JADFormBaseCell.swift in Sources */,
