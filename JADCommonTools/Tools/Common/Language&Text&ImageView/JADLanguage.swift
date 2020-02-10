@@ -43,7 +43,7 @@ class JADLanguage {
     }
     
     class func key(_ key: String?) -> String {
-        return JADLanguage.languageBundle?.localizedString(forKey: key ?? "", value: nil, table: "Localizations") ?? "语言丢失"
+        return JADLanguage.languageBundle?.localizedString(forKey: key ?? "key 为 nil", value: nil, table: "Localizations") ?? "语言丢失"
     }
 
     class func initialize(defaultLanguage: JADLanguageType?) {
@@ -57,6 +57,8 @@ class JADLanguage {
     }
     
     class func setCurrentLanguage(_ language: JADLanguageType) {
+        let currentLanguage = UserDefaults.standard.value(forKey: JADLanguage.languageKey) as? String
+        if language.rawValue == currentLanguage { return }
         UserDefaults.standard.set(language.rawValue, forKey: JADLanguage.languageKey)
         UserDefaults.standard.synchronize()
         

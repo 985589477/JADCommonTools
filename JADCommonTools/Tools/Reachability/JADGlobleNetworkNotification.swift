@@ -44,3 +44,4 @@ class JADGlobleNetworkNotification {
         self.closure.removeValue(forKey: key)
     }
 }
+

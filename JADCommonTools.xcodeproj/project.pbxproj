@@ -129,6 +129,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C2920E4B23F0E3C2005EB52A /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				C2E087E823BDC0E100DFE8FD /* JADGlobleNetworkNotification.swift */,
+			);
+			path = Reachability;
+			sourceTree = "<group>";
+		};
 		C2E0874123B99FDD00DFE8FD = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				C2E0878F23B9E8B300DFE8FD /* README.md */,
+				C2920E4B23F0E3C2005EB52A /* Reachability */,
 				C2E087D523BDAD6100DFE8FD /* UI */,
 				C2E0876823B9A0B500DFE8FD /* Component */,
 				C2E0876723B9A0A000DFE8FD /* Category */,
@@ -183,7 +192,6 @@
 		C2E0876423B9A03F00DFE8FD /* Networks */ = {
 			isa = PBXGroup;
 			children = (
-				C2E087E823BDC0E100DFE8FD /* JADGlobleNetworkNotification.swift */,
 				C2E087EA23BDC8A300DFE8FD /* APPURL.swift */,
 				C2E087F623BDCA2200DFE8FD /* JADBaseNetwork.swift */,
 				C2E087F423BDCA2200DFE8FD /* JADHttpError.swift */,
