@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(JADStorage.shared.key)
+        
 
         let string = "firstString"
         print(string.subString(range: Range(uncheckedBounds: (1,4))))

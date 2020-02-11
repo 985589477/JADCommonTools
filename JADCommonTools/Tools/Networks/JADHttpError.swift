@@ -73,7 +73,7 @@ enum JADHTTPAccordingErrorType: Int {
 extension JADHTTPError {
     func catchError(_ error: JADHTTPErrorCode) {
         if error == .responseTimeout {
-            JADStorage.shared.clearAllUserDefaultsData()
+//            JADStorage.shared.clearAllUserDefaultsData()
         }
     }
 }
