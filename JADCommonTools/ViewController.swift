@@ -87,17 +87,10 @@ class ViewController: UIViewController {
             make.width.height.equalTo(100)
             make.top.equalTo(imageView.snp.bottom).offset(20)
         }
-        
     }
     
     @objc func clickLanguageButton(_ sender: UIButton) {
-        let picker = JADImagePicker(library: JADImageLibraryConfiguration())
-        picker.open(sourceType: .photoLibrary)
-        picker.result = { (result) in
-            result.originalImage
-            result.editedImage
-            result.info
-        }
+
     }
     
     @objc func changedLocalized() {
