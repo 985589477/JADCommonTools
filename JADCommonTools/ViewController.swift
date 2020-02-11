@@ -13,9 +13,7 @@ import Photos
 class ViewController: UIViewController {
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        print(JADStorage.shared.key)
-        
+        super.viewDidLoad()        
 
         let string = "firstString"
         print(string.subString(range: Range(uncheckedBounds: (1,4))))

@@ -14,12 +14,20 @@ class JADStorage {
 //    @JADStorageConfiguration(key: "key", defaultValue: "value")
 //    var key: String?
     
-    
     static let shared = JADStorage()
+    
+    ///设置忽略清除的key
+    var ignoreClearKey = [String]()
 
-    //清除数据
-    func clearAllUserDefaultsData(){
-        UserDefaults.standard.dictionaryRepresentation()
+    ///清除数据
+    func clearUserDefaultsData(){
+        let parameters = UserDefaults.standard.dictionaryRepresentation()
+        for key in parameters.keys {
+            if ignoreClearKey.contains(key) {
+                continue
+            }
+            UserDefaults.standard.removeObject(forKey: key)
+        }
         UserDefaults.standard.synchronize()
     }
 }
