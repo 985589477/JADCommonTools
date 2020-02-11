@@ -12,86 +12,82 @@ protocol JADScrollSegmentViewDelegate {
     func segment(segment: JADScrollSegmentView, index: Int)
 }
 
-class JADScrollSegmentItem: NSObject {
-    var id: String = "" //栏目id
-    var text: String = ""
-    var isSelected: Bool = false
-}
-
 typealias JADScrollBehaviorDelegate = UICollectionViewDelegate & UICollectionViewDataSource & JADScrollSegmentDelegate
 
 class JADScrollSegmentView: UIView {
     //MARK: Public
     var delegate: JADScrollSegmentViewDelegate?
+    ///必须设置这个代理
     var behaviorDelegate: JADScrollBehaviorDelegate!
-    
-    let rightAction = JADButton()
-    
-    var collectionView: UICollectionView?
-    var contentInset = UIEdgeInsets.zero {
+    var itemInset = UIEdgeInsets.zero {
         didSet {
             self.setNeedsLayout()
             self.layoutIfNeeded()
         }
     }
-    var items: [JADScrollSegmentItem]? {
+    var items: [Any]? {
         didSet {
             guard (self.items?.count ?? 0) > 0 else { return }
-            currentItem = self.items?[self.selectedSegmentIndex]
-            currentItem?.isSelected = true
+            tagItems =  self.items?.map({ (data) -> JADSegmentItem in
+                return JADSegmentItem(data)
+            })
+            tagItem = self.tagItems?[self.selectedSegmentIndex]
+            tagItem?.isSelected = true
             collectionView?.reloadData()
         }
     }
     var selectedSegmentIndex: Int = 0 {
         didSet {
             guard self.selectedSegmentIndex < (items?.count ?? 0 - 1) else { return }
-            let item = items?[self.selectedSegmentIndex]
-            currentItem?.isSelected = false
-            currentItem = item
-            currentItem?.isSelected = true
+            let item = tagItems?[self.selectedSegmentIndex]
+            tagItem?.isSelected = false
+            tagItem = item
+            tagItem?.isSelected = true
             collectionView?.reloadData()
         }
     }
-    var currentItem: JADScrollSegmentItem?
+    var currentItem: Any? {
+        return tagItem?.extraData
+    }
+    private var tagItems: [JADSegmentItem]?
+    private var tagItem: JADSegmentItem?
     
-    //MARK: Private
-    static let identifier = "JADScrollSegmentItem"
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        self.backgroundColor = UIColor.white
-        self.addSubview(rightAction)
-        
-        
+    private var collectionView: UICollectionView?
+    
+    init(frame: CGRect? = CGRect.zero, collectionView callBack: ((UICollectionView) -> Void)?) {
+        super.init(frame: frame ?? CGRect.zero)
         let layout = JADScrollSegmentLayout()
         collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
         collectionView?.delegate = behaviorDelegate
         collectionView?.dataSource = behaviorDelegate
         collectionView?.extendDelegate = behaviorDelegate
-        collectionView?.backgroundColor = UIColor.hex("#FFFFFF")
+        collectionView?.backgroundColor = UIColor.white
         collectionView?.showsHorizontalScrollIndicator = false
         collectionView?.contentInset = UIEdgeInsets(top: 0, left: 18, bottom: 0, right: 0)
         if #available(iOS 11.0, *) {
             collectionView?.contentInsetAdjustmentBehavior = .never
         }
         self.addSubview(collectionView!)
+        callBack?(collectionView!)
     }
-
+    
     override func layoutSubviews() {
         super.layoutSubviews()
-        rightAction.snp.makeConstraints { (make) in
-            make.right.equalToSuperview().offset(-18)
-            make.width.height.equalTo(16)
-            make.centerY.equalToSuperview()
-        }
-        collectionView?.frame = CGRect(x: contentInset.left, y: contentInset.top, width: rightAction.frame.minX - 16 - contentInset.left - contentInset.right, height: self.frame.height - contentInset.top - contentInset.bottom)
+        collectionView?.frame = CGRect(x: itemInset.left, y: itemInset.top, width: itemInset.left - itemInset.right, height: self.frame.height - itemInset.top - itemInset.bottom)
     }
-
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
 }
 
+fileprivate class JADSegmentItem {
+    var isSelected: Bool = false
+    var extraData: Any
+    init(_ model: Any) {
+        extraData = model
+    }
+}
 
 protocol JADScrollSegmentDelegate {
     func itemWidth(index: Int) -> CGFloat
